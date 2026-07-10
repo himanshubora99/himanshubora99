@@ -17,7 +17,7 @@ identity, not code, and must be replaced in your fork:
 | `LINKEDIN_HANDLE`, `LINKEDIN_URL` | Points to a real person; you'd be posing as them. |
 | `PORTFOLIO_URL` | Ditto — someone else's site. |
 | `UPTIME_ORIGIN` (DOB) | Personal data (GDPR-style protections apply in many jurisdictions). |
-| `ascii_art.txt` | Derived from the original author's photo. That's their **likeness** — covered by right-of-publicity laws, which are separate from copyright and can't be waived by MIT. |
+| `assets/ascii_art.txt` | Derived from the original author's photo. That's their **likeness** — covered by right-of-publicity laws, which are separate from copyright and can't be waived by MIT. |
 | All contact links in `README.md` | Same reason as email/LinkedIn/portfolio above. |
 
 **Short version:** MIT covers the *how* (the code and structure). It does not
@@ -51,12 +51,12 @@ You have two options:
 
 1. Put a square headshot photo in the repo root as `photo.jpeg` (or set `PORTRAIT_SRC` in `config.py` to your filename).
 2. Install Pillow: `pip install pillow`
-3. Run: `python make_ascii.py`
-4. This overwrites `ascii_art.txt`. Commit it.
+3. Run: `python scripts/make_ascii.py`
+4. This overwrites `assets/ascii_art.txt`. Commit it.
 
 **Option B — Write ASCII by hand:**
 
-Just edit `ascii_art.txt` directly. Any monospace ASCII drawing works; aim for around 42 columns wide and 20-30 rows tall so the card layout balances.
+Just edit `assets/ascii_art.txt` directly. Any monospace ASCII drawing works; aim for around 42 columns wide and 20-30 rows tall so the card layout balances.
 
 ## 4. Update `README.md`
 
@@ -99,10 +99,10 @@ Your profile card should now be live at `https://github.com/<your-username>`. If
 | File | What it does |
 |---|---|
 | `config.py` | Your personal fields — the only file you have to edit |
-| `build_card.py` | Fetches your live GitHub stats and renders `card_dark.svg` / `card_light.svg` |
-| `make_ascii.py` | Converts a photo to `ascii_art.txt` |
-| `ascii_art.txt` | The text portrait embedded in the card SVG |
-| `card_dark.svg`, `card_light.svg` | Rendered cards, auto-updated by the stats workflow |
+| `scripts/build_card.py` | Fetches your live GitHub stats and renders `assets/card_dark.svg` / `assets/card_light.svg` |
+| `scripts/make_ascii.py` | Converts a photo to `assets/ascii_art.txt` |
+| `assets/ascii_art.txt` | The text portrait embedded in the card SVG |
+| `assets/card_dark.svg`, `assets/card_light.svg` | Rendered cards, auto-updated by the stats workflow |
 | `README.md` | Your public profile — references the SVGs |
 | `.github/workflows/update-stats.yml` | Daily refresh of the card |
 | `.github/workflows/snake.yml` | Twice-daily refresh of the contribution snake |

@@ -1,14 +1,18 @@
 import datetime
 import json
 import os
+import sys
 import time
 import urllib.request
 from xml.sax.saxutils import escape
 
-import config
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+sys.path.insert(0, REPO_ROOT)
+import config  # noqa: E402  (import must follow sys.path setup)
 
-REPO_DIR = os.path.dirname(__file__)
-ASCII_PATH = os.path.join(REPO_DIR, "ascii_art.txt")
+ASSETS_DIR = os.path.join(REPO_ROOT, "assets")
+ASCII_PATH = os.path.join(ASSETS_DIR, "ascii_art.txt")
 USERNAME = config.GITHUB_USERNAME
 UPTIME_ORIGIN = datetime.date(*config.UPTIME_ORIGIN)
 
@@ -258,7 +262,7 @@ def main():
 
     for theme in THEMES:
         svg = build_svg(theme, ascii_lines, info_tspans, height, width)
-        out_path = os.path.join(REPO_DIR, f"card_{theme}.svg")
+        out_path = os.path.join(ASSETS_DIR, f"card_{theme}.svg")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg)
         print(f"wrote {out_path} ({width}x{height})")

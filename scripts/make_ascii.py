@@ -10,10 +10,13 @@ import sys
 
 from PIL import Image, ImageOps, ImageEnhance
 
-import config
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+sys.path.insert(0, REPO_ROOT)
+import config  # noqa: E402  (import must follow sys.path setup)
 
-REPO_DIR = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(REPO_DIR, "ascii_art.txt")
+ASSETS_DIR = os.path.join(REPO_ROOT, "assets")
+OUT = os.path.join(ASSETS_DIR, "ascii_art.txt")
 
 RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
@@ -63,7 +66,7 @@ def to_ascii(path, cols=COLS):
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else config.PORTRAIT_SRC
     if not os.path.isabs(src):
-        src = os.path.join(REPO_DIR, src)
+        src = os.path.join(REPO_ROOT, src)
     if not os.path.exists(src):
         raise SystemExit(
             f"Photo not found: {src}\n"

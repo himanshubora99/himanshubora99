@@ -1,7 +1,7 @@
 <a href="https://github.com/himanshubora99/himanshubora99">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/card_dark.svg">
-    <img alt="Himanshu Bora's GitHub Profile README" src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/card_light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/assets/card_dark.svg">
+    <img alt="Himanshu Bora's GitHub Profile README" src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/assets/card_light.svg">
   </picture>
 </a>
 

@@ -1,3 +1,4 @@
 compute_stats.py
 stats.json
 ascii_portrait_preview.png
+__pycache__/
