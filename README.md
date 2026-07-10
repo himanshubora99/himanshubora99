@@ -2,7 +2,7 @@
 <tr>
 <td valign="top">
 
-<img src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/ascii_portrait.svg" width="397" height="350" alt="ASCII portrait" />
+<img src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/ascii_portrait.svg" width="306" height="270" alt="ASCII portrait" />
 
 </td>
 <td valign="top">
