@@ -3,6 +3,31 @@
 You can adopt this whole setup (neofetch-style ASCII card + live GitHub stats +
 snake animation) for your own GitHub profile. Steps below take ~15 minutes.
 
+## ⚠️ Read this before you fork — what you MUST change
+
+This repo is MIT-licensed, so you're free to use the **code** (the Python
+scripts, workflow YAMLs, SVG structure, layout, algorithms). **The MIT license
+does NOT cover personal details.** The following are the original author's
+identity, not code, and must be replaced in your fork:
+
+| Must replace | Why (not just polite — legally required) |
+|---|---|
+| `NAME`, `HANDLE` in the card | Using someone else's name in your profile is impersonation. |
+| `EMAIL` | You'd be publishing someone else's contact address as your own. |
+| `LINKEDIN_HANDLE`, `LINKEDIN_URL` | Points to a real person; you'd be posing as them. |
+| `PORTFOLIO_URL` | Ditto — someone else's site. |
+| `UPTIME_ORIGIN` (DOB) | Personal data (GDPR-style protections apply in many jurisdictions). |
+| `ascii_art.txt` | Derived from the original author's photo. That's their **likeness** — covered by right-of-publicity laws, which are separate from copyright and can't be waived by MIT. |
+| All contact links in `README.md` | Same reason as email/LinkedIn/portfolio above. |
+
+**Short version:** MIT covers the *how* (the code and structure). It does not
+cover the *who* (identity, contact, likeness). Every one of the fields above
+must be replaced with your own before you publish your fork.
+
+The steps below walk you through exactly what to change and where.
+
+---
+
 ## 1. Fork and rename
 
 1. Click **Fork** at the top of this repo.
