@@ -131,7 +131,7 @@ def build_info_lines(stats):
     y += LINE_H
     rows.append(("kv", *kv_line(y, "LinkedIn", 8, "himanshu-bora-5265a9185")))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Website", 15, "himanshubora.com")))
+    rows.append(("kv", *kv_line(y, "Portfolio", 13, "himanshubora.com")))
     y += LINE_H * 2
     rows.append(("header", "- GitHub Stats", f'<tspan x="{INFO_X}" y="{y}">- GitHub Stats</tspan>'))
     y += LINE_H
