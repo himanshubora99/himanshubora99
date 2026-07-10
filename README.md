@@ -17,4 +17,9 @@
   </a>
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/himanshubora99/himanshubora99/output/snake-dark.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/output/snake.svg">
+</picture>
+
 ![Profile views](https://komarev.com/ghpvc/?username=himanshubora99&color=blueviolet&style=flat)

@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import time
@@ -7,6 +8,10 @@ from xml.sax.saxutils import escape
 REPO_DIR = os.path.dirname(__file__)
 ASCII_PATH = os.path.join(REPO_DIR, "ascii_art.txt")
 USERNAME = "himanshubora99"
+
+# uptime origin — swap to your real DOB (YYYY, M, D) if you want a personal age
+# instead of the GitHub account age currently shown here.
+UPTIME_ORIGIN = datetime.date(2018, 12, 2)
 
 FONT_SIZE = 16
 LINE_H = 20
@@ -112,18 +117,41 @@ def kv_line(y, key, dots_n, value):
     return plain, markup
 
 
+def format_uptime(origin):
+    today = datetime.date.today()
+    years = today.year - origin.year
+    months = today.month - origin.month
+    days = today.day - origin.day
+    if days < 0:
+        months -= 1
+        prev_month_end = (today.replace(day=1) - datetime.timedelta(days=1)).day
+        days += prev_month_end
+    if months < 0:
+        years -= 1
+        months += 12
+    return f"{years} years, {months} months, {days} days"
+
+
 def build_info_lines(stats):
     loc = stats["total_add"] + stats["total_del"]
-    rows = []  # (plain_text_or_None_for_header, markup, is_header)
+    uptime = format_uptime(UPTIME_ORIGIN)
+    last_updated = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    rows = []
     y = TOP_Y
 
     rows.append(("header", "himanshu@github", f'<tspan x="{INFO_X}" y="{y}">himanshu@github</tspan>'))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "OS", 12, "Windows")))
+    rows.append(("kv", *kv_line(y, "OS", 20, "Windows")))
+    y += LINE_H
+    rows.append(("kv", *kv_line(y, "Uptime", 16, uptime)))
+    y += LINE_H
+    rows.append(("kv", *kv_line(y, "Location", 15, "India")))
     y += LINE_H
     rows.append(("kv", *kv_line(y, "Languages.Programming", 4, "Dart, JavaScript")))
     y += LINE_H
     rows.append(("kv", *kv_line(y, "Framework", 12, "Flutter")))
+    y += LINE_H
+    rows.append(("kv", *kv_line(y, "Tools", 17, "VS Code, Android Studio, Git")))
     y += LINE_H * 2
     rows.append(("header", "- Contact", f'<tspan x="{INFO_X}" y="{y}">- Contact</tspan>'))
     y += LINE_H
@@ -136,25 +164,21 @@ def build_info_lines(stats):
     rows.append(("header", "- GitHub Stats", f'<tspan x="{INFO_X}" y="{y}">- GitHub Stats</tspan>'))
     y += LINE_H
 
-    repos_plain = f". Repos: .... {stats['total_repos']} {{Contributed: {stats['contributed_repos']}}} | Stars: ........... {stats['total_stars']}"
+    repos_plain = f". Repos: .... {stats['total_repos']} {{Contributed: {stats['contributed_repos']}}}"
     repos_markup = (
         f'<tspan x="{INFO_X}" y="{y}" class="cc">. </tspan>'
         f'<tspan class="key">Repos</tspan>:<tspan class="cc"> .... </tspan>'
         f'<tspan class="value">{stats["total_repos"]}</tspan> '
-        f'{{<tspan class="key">Contributed</tspan>: <tspan class="value">{stats["contributed_repos"]}</tspan>}} | '
-        f'<tspan class="key">Stars</tspan>:<tspan class="cc"> ........... </tspan>'
-        f'<tspan class="value">{stats["total_stars"]}</tspan>'
+        f'{{<tspan class="key">Contributed</tspan>: <tspan class="value">{stats["contributed_repos"]}</tspan>}}'
     )
     rows.append(("kv", repos_plain, repos_markup))
     y += LINE_H
 
-    commits_plain = f". Commits: ............... {stats['total_commits']} | Followers: ....... {stats['followers']}"
+    commits_plain = f". Commits: .................. {stats['total_commits']}"
     commits_markup = (
         f'<tspan x="{INFO_X}" y="{y}" class="cc">. </tspan>'
-        f'<tspan class="key">Commits</tspan>:<tspan class="cc"> ............... </tspan>'
-        f'<tspan class="value">{stats["total_commits"]}</tspan> | '
-        f'<tspan class="key">Followers</tspan>:<tspan class="cc"> ....... </tspan>'
-        f'<tspan class="value">{stats["followers"]}</tspan>'
+        f'<tspan class="key">Commits</tspan>:<tspan class="cc"> .................. </tspan>'
+        f'<tspan class="value">{stats["total_commits"]}</tspan>'
     )
     rows.append(("kv", commits_plain, commits_markup))
     y += LINE_H
@@ -168,6 +192,15 @@ def build_info_lines(stats):
         f'<tspan class="delc">{stats["total_del"]:,}</tspan><tspan class="delc">--</tspan> )'
     )
     rows.append(("kv", loc_plain, loc_markup))
+    y += LINE_H
+
+    updated_plain = f". Last Updated: ............ {last_updated}"
+    updated_markup = (
+        f'<tspan x="{INFO_X}" y="{y}" class="cc">. </tspan>'
+        f'<tspan class="key">Last Updated</tspan>:<tspan class="cc"> ............ </tspan>'
+        f'<tspan class="value">{last_updated}</tspan>'
+    )
+    rows.append(("kv", updated_plain, updated_markup))
 
     max_len = max(len(plain) for kind, plain, markup in rows if kind == "kv")
 
