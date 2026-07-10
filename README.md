@@ -70,8 +70,8 @@ GitHub Stats -------------
 <!--STATS:START-->
 ```
 Repos: .... 21 {Contributed: 21} | Stars: 0
-Commits: .... 33 | Followers: .... 0
-Lines of Code on GitHub: 140,175 ( 135,784++, 4,391-- )
+Commits: .... 35 | Followers: .... 0
+Lines of Code on GitHub: 140,035 ( 135,672++, 4,363-- )
 ```
 <!--STATS:END-->
 
