@@ -9,9 +9,7 @@ REPO_DIR = os.path.dirname(__file__)
 ASCII_PATH = os.path.join(REPO_DIR, "ascii_art.txt")
 USERNAME = "himanshubora99"
 
-# uptime origin — swap to your real DOB (YYYY, M, D) if you want a personal age
-# instead of the GitHub account age currently shown here.
-UPTIME_ORIGIN = datetime.date(2018, 12, 2)
+UPTIME_ORIGIN = datetime.date(1999, 1, 5)
 
 FONT_SIZE = 16
 LINE_H = 20
