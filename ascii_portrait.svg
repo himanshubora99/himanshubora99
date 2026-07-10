@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="397px" height="350px" font-family="Consolas,Menlo,monospace" font-size="7px">
+<style>
+text, tspan { white-space: pre; }
+.art { fill: #57606a; }
+@media (prefers-color-scheme: dark) {
+  .art { fill: #8b949e; }
+}
+</style>
+<g class="art">
+<text x="3" y="8">00000QQQQLLLLLCCCCCCCCCCCJCCCCCJJCJCCCCCCJJJJJJJCJCCCJJCCCCCCCCCCCCCCCCCCCLLLLCCCLLLLLLLLL</text>
+<text x="3" y="16">QLLLLLLLCCCJJJJJJJUUUUUUUUUUUUUUUUUUUUUYYYYYYYUUUUUUUYUUUUUUUUUUUUUUUUJJJJJJCCCJJJJJCJCCCC</text>
+<text x="3" y="24">CCCJJJJJJUUUUUYYYXXXXXXXXXXXXXXXXXzzXzzzzzzzzzXXzzzzzzzzzzzXzzzXXXXXXXXXXYYYUUUUUYUUUUUUUU</text>
+<text x="3" y="32">UUUUUYYYYYXXXzzzzccccccccccccccccccccccccvvvvvcccvvvvvvccccccccccccccczczzzzzzzXXzXXXXXXYY</text>
+<text x="3" y="40">YXXXXzzzzcccccccvvvuuuuuuuuvvvuuuuuuuuuuuuuuunnnunuunnnuuuuuuuuuvvvuuuuuvvccccccczzzzzzzzX</text>
+<text x="3" y="48">zzzcccccvvvvvuuuuunnnnnnnnnnnnnnxxxxnnnnxxxxxxxxrrrrrrrrxxxxxnnnnnnnnnnnnuuuvuuvvvvcvccczz</text>
+<text x="3" y="56">vvvvuvvvuuunnnnnnxxxrrrrrrrrrrrrrrjrrrrrrjjffffjruvcuxrjfffrrrrjrrrrxxxxxxxxnnnuuuuuvvvvvc</text>
+<text x="3" y="64">unnnnnnnnxxrrrrrrrrjjjjjjjjjjjjfffffjjfttfxcLZmwwpppqOQCXXvjttfjjjjjjjrrrrxxxxnnnnnnuuuvvv</text>
+<text x="3" y="72">xxxxxrrrrrrjjjjjjjjffffffffffftttfff/\jzOph#MM#*oo*aaoabdpdmYnf/tffffffjjjrrrrrxxrxxxnunuu</text>
+<text x="3" y="80">rrrjjjjjjjffffffffttttt//t///////t/\uOa&amp;8&amp;WM#MM&amp;&amp;M*oahhkppqwmOQYuftfffffffffjjjrrrrrrxxxnn</text>
+<text x="3" y="88">rjjjfffftttttt////////\\\\\\\\\\\(rd8B%B%W8BB@$@@%&amp;M**oabddkkdppk0t////tttffffffjjjjjjrrxx</text>
+<text x="3" y="96">ffffffft/////\\\\\\\\\|||||||||\)x&amp;$@B@@$$@BB8&amp;M*abdqwZ0Jcnnz0*&amp;a#U\////////ttttfffffjjrrr</text>
+<text x="3" y="104">tt/////\\\\\\\\|||(((||||(((((()/W$@$$$@%&amp;#odOUvxft/\){[?~ilII_w&amp;bwr|\\\\\\//////ttfffffjj</text>
+<text x="3" y="112">///\\\\||||||||((()))))))))))))1t&amp;@@$&amp;wm0CJXvt(}]--__~&lt;&lt;&gt;!lI;:^&gt;qadJ(|||\|\\\\//////tttfff</text>
+<text x="3" y="120">\\\||||((((((())))))111111111))1|M@@Bqunnrt\|1]_~&lt;~~&gt;i!l;:,:::,^|baz1(((||||||\\\\/////tff</text>
+<text x="3" y="128">|||||(((())))))))111111{{1111111}k$BWJrrjjrrrnf)[]?_++?[}]?+I::"+Lbr1)))((||||||||\\\/////</text>
+<text x="3" y="136">||(())))))))1111{{{{{{{{{{{{{{{{[nBBkfjrzJXcuXLQYr(]{/vLYf)]-&gt;;,iQQ{11))))(((((((||||\\\\/</text>
+<text x="3" y="144">(())))))111{{{{{{{{{{{{}}}}}}}}{}[qBJ(frcLwwm0JOmU1i+vwqwzt\?&lt;l"&gt;J|}1{1))))))()))(((|||\\\</text>
+<text x="3" y="152">)))11111{{{{{{}}}}}}}}}}}}}}}[[[[CQbzt|1[}(tfftrx\&gt;^i{rvvt}?~II,&lt;t?{{{{{111))))))))((|||\\</text>
+<text x="3" y="160">))11{{{{{{}}}}}}}}}}}}[[[[[[[[[[?zLZzj|}-i;:I&gt;}[]~,`^;_&lt;ll:`.'"I~{[}}}}}{1{1))))))))(||||\</text>
+<text x="3" y="168">111{{{{{{{}}}}}[[[[[[[[[[[[[[]]]]?jUvrf\|){[{vQ/rj}!I,]Jt?&lt;l:^,&gt;~_[[}}}}}{{111111))))((|||</text>
+<text x="3" y="176">{{{{{}}}}}}}}}[[[[[[[[]]]]]]]]]]???tzxczcxrt\uJqamYCJf)zQXt}&lt;!!ll[[[[[[}}}{{{{{{11)))))((|</text>
+<text x="3" y="184">{{{{}}}}[}[[[[[[[[[]]]]]]]]]]??????}tzzXcnrvwkOUzurruju00Xv|_!&gt;++[][[[[}}}}}{{{{{11)))))(|</text>
+<text x="3" y="192">{{{}}}}[[[[[[[[]]]]]]]]]]]]????]]]?+&lt;UQzXcfnUJYx/{[?{-\rU)}-~~][]?][[[[[}}}{{{{{1111)))(((</text>
+<text x="3" y="200">}}}}}[[[[[[[]]]???]]]]?]]]]]?-_+++]fq*JqZQCUrfnvvuf\-&gt;!_|\1)-_??]]]][[[[[[}}}{{{1111))))((</text>
+<text x="3" y="208">}}}[}[[[[[]]]]]?????]]]?-_~~+])jzQa8$b1qdbdZJj|1{{]~ii~](/}jL{___-?][]][[[[}}{{{{111))))((</text>
+<text x="3" y="216">[[[[[[[[[[]?]]]]]??_+~+-}|xJwa&amp;@B@@%@%~)mbbhadZCXcznjfjf|};lMqJuf)]__-?][[[}}}}}{1111))))(</text>
+<text x="3" y="224">}[[[[[[[][[]?_+~+-[)tvLqhM8BB@B%%%B@@$0'_uZqqpppqwOCcr|{]&lt;'`hkpddkwCv/1[?-?][[}}{{{{11))))</text>
+<text x="3" y="232">}[[[[]]]]_+_?1fcLmboM&amp;&amp;&amp;&amp;&amp;&amp;8%%B%BB@@$@$f`,~tYCJUzvj(}[1[l. lWappdk*#*hpOUn\1}]?][}{{11))))</text>
+<text x="3" y="240">[[[[]]?]_/zQda#W&amp;WWMMMW&amp;888%%BB%%%B@@@@M_,` "_\rrt\|([!' . t@*hbbhka##*oahbqZCcj\{[[11))))</text>
+<text x="3" y="248">[[]]]?]+u8%WMW#MMWWW&amp;&amp;&amp;&amp;88%%%%B@@BB@@@@$Q;,'   +rruni   . ^d%##ohko*#MM#*ooaaahkdZQr}1))))</text>
+<text x="3" y="256">[[]]]]?{*%&amp;&amp;MW&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;888888%%%%B%BBBBB@8[`^!ua%%W#o*0-,  ]W&amp;##MM#MWMMMMM##***oooh*ou[))))</text>
+<text x="3" y="264">]]]??]+t%&amp;%%%&amp;8888888&amp;&amp;&amp;&amp;&amp;888B@8888%%%B%$Q;&gt;)Yk$@&amp;a*L?1[i"f8W###MMM##MMMMMMMMMM##oW#d){1))</text>
+<text x="3" y="272">[]]?]??qBBBBB%&amp;%%88%88&amp;8&amp;&amp;8888BB8&amp;888%%B%&amp;['"&gt;~X@&amp;oL '' `!c@M#MMWWMM#WMMMMWWWWMMMM%##n]11)</text>
+<text x="3" y="280">[[]?]~UB&amp;B$@BB88B8888&amp;&amp;88&amp;&amp;8888BB&amp;&amp;888%B%$U  ";U@8*Q`^  .&gt;w@##MMMMWMWMMMMMWWWWWWM&amp;BMMd){11</text>
+<text x="3" y="288">]]?]+t&amp;8%%B@@@@8BB%8&amp;&amp;&amp;888&amp;&amp;888&amp;%B&amp;&amp;&amp;8%%B%W&lt; '/@$%aWJ'  "}M8#MMWWWMWWWMMWMWWWWW&amp;W%8M#ML[11</text>
+<text x="3" y="296">]]?_[oB%B@BBBB@%8@B%88888&amp;&amp;&amp;&amp;&amp;&amp;88BB&amp;&amp;&amp;8%%%@J "q$@8ohW|  :u@MMMMWWWW&amp;WWWMMWWWWW&amp;&amp;8@8WWMot[1</text>
+<text x="3" y="304">]??+O@%BB@@@@@@@%@$B%%%%%88&amp;&amp;&amp;&amp;&amp;88BB&amp;&amp;&amp;8%%%Wi^*@%8*aMO, &gt;p@MMMWWWW&amp;&amp;WWWWWWW&amp;&amp;&amp;8&amp;B@&amp;&amp;WMW0[1</text>
+<text x="3" y="312">??&lt;xB%@@@@BB@@$$@B$$@%%%B%%8888888&amp;BB&amp;&amp;8%B%@c`*%&amp;&amp;#o#h~ )%&amp;MMMMW&amp;8&amp;&amp;&amp;&amp;&amp;&amp;&amp;W&amp;&amp;888%@B%8&amp;WMb1{</text>
+<text x="3" y="320">]-}aBB@@@@@@@@@@$$$$$@BB@@BB%8888888BB&amp;&amp;8%%%*&gt;h8WW#*#W)`U$MMMMWW8&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;888%%@$BB%8&amp;Wa)}</text>
+<text x="3" y="328">[+J$%@@@@@@B@@@@@$$$$$@@@@@@B%%%88888BB&amp;&amp;8%%@xp8MM##MBxIaBWWMWW8888888%%%%%8%B@$$@@%88&amp;Mj[</text>
+<text x="3" y="336">[_Z@@$@@B@@@@@@@$$$$$$$$$@$$$@B%%88888BB&amp;8%%Bho&amp;MMMMW$X(@&amp;WWWW8%%%%%%%%%%%%%B@$$@@BB%8W&amp;L]</text>
+<text x="3" y="344">?)&amp;@BB@$@@@@@@@@@$$$$$$$$$$$$$@@B%%8888@B88%%88&amp;WWWW&amp;$0Z@WWW&amp;8%%%%%%%%%%%%%B@$$$@@@B%8&amp;8L]</text>
+</g>
+</svg>
