@@ -66,10 +66,14 @@ LinkedIn: .................. himanshu-bora-5265a9185
 Website: ................... himanshubora.com
 
 GitHub Stats -------------
+```
+<!--STATS:START-->
+```
 Repos: .... 21 {Contributed: 21} | Stars: 0
 Commits: .... 33 | Followers: .... 0
 Lines of Code on GitHub: 140,175 ( 135,784++, 4,391-- )
 ```
+<!--STATS:END-->
 
 <img src="https://github-readme-stats.vercel.app/api?username=himanshubora99&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150" alt="GitHub stats" />
 
