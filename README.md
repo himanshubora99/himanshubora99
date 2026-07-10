@@ -2,7 +2,9 @@
 <tr>
 <td valign="top">
 
+<a href="https://github.com/himanshubora99/himanshubora99">
 <img src="https://raw.githubusercontent.com/himanshubora99/himanshubora99/main/ascii_portrait.svg" width="306" height="270" alt="ASCII portrait" />
+</a>
 
 </td>
 <td valign="top">
