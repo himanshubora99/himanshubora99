@@ -5,11 +5,12 @@ import time
 import urllib.request
 from xml.sax.saxutils import escape
 
+import config
+
 REPO_DIR = os.path.dirname(__file__)
 ASCII_PATH = os.path.join(REPO_DIR, "ascii_art.txt")
-USERNAME = "himanshubora99"
-
-UPTIME_ORIGIN = datetime.date(1999, 1, 5)
+USERNAME = config.GITHUB_USERNAME
+UPTIME_ORIGIN = datetime.date(*config.UPTIME_ORIGIN)
 
 FONT_SIZE = 16
 LINE_H = 20
@@ -137,27 +138,28 @@ def build_info_lines(stats):
     rows = []
     y = TOP_Y
 
-    rows.append(("header", "himanshu@github", f'<tspan x="{INFO_X}" y="{y}">himanshu@github</tspan>'))
+    handle_header = escape(config.HANDLE)
+    rows.append(("header", config.HANDLE, f'<tspan x="{INFO_X}" y="{y}">{handle_header}</tspan>'))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "OS", 20, "Windows")))
+    rows.append(("kv", *kv_line(y, "OS", 20, config.OS)))
     y += LINE_H
     rows.append(("kv", *kv_line(y, "Uptime", 16, uptime)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Location", 15, "India")))
+    rows.append(("kv", *kv_line(y, "Location", 15, config.LOCATION)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Languages.Programming", 4, "Dart, JavaScript")))
+    rows.append(("kv", *kv_line(y, "Languages.Programming", 4, config.LANGUAGES)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Framework", 12, "Flutter")))
+    rows.append(("kv", *kv_line(y, "Framework", 12, config.FRAMEWORK)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Tools", 17, "VS Code, Android Studio, Git")))
+    rows.append(("kv", *kv_line(y, "Tools", 17, config.TOOLS)))
     y += LINE_H * 2
     rows.append(("header", "- Contact", f'<tspan x="{INFO_X}" y="{y}">- Contact</tspan>'))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Email", 6, "himanshubora98@gmail.com")))
+    rows.append(("kv", *kv_line(y, "Email", 6, config.EMAIL)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "LinkedIn", 8, "himanshu-bora-5265a9185")))
+    rows.append(("kv", *kv_line(y, "LinkedIn", 8, config.LINKEDIN_HANDLE)))
     y += LINE_H
-    rows.append(("kv", *kv_line(y, "Portfolio", 13, "himanshubora.com")))
+    rows.append(("kv", *kv_line(y, "Portfolio", 13, config.PORTFOLIO_DISPLAY)))
     y += LINE_H * 2
     rows.append(("header", "- GitHub Stats", f'<tspan x="{INFO_X}" y="{y}">- GitHub Stats</tspan>'))
     y += LINE_H

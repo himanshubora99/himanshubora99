@@ -1,12 +1,25 @@
+"""
+Convert a photo to ASCII art for the profile card.
+
+Usage:
+    python make_ascii.py              # reads config.PORTRAIT_SRC
+    python make_ascii.py path/to.jpg  # override with a specific file
+"""
+import os
+import sys
+
 from PIL import Image, ImageOps, ImageEnhance
 
-SRC = r"C:\Users\himan\Downloads\prof Profile.jpeg"
-OUT = r"D:\Claude Local Session\github-profile-readme\ascii_art.txt"
+import config
+
+REPO_DIR = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(REPO_DIR, "ascii_art.txt")
 
 RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
 COLS = 42
 ASPECT = 0.46  # monospace glyphs are ~2x taller than wide
+
 
 def to_ascii(path, cols=COLS):
     img = Image.open(path).convert("L")
@@ -46,7 +59,21 @@ def to_ascii(path, cols=COLS):
         lines.append("".join(row))
     return "\n".join(lines)
 
-art = to_ascii(SRC)
-with open(OUT, "w", encoding="utf-8") as f:
-    f.write(art)
-print(art)
+
+def main():
+    src = sys.argv[1] if len(sys.argv) > 1 else config.PORTRAIT_SRC
+    if not os.path.isabs(src):
+        src = os.path.join(REPO_DIR, src)
+    if not os.path.exists(src):
+        raise SystemExit(
+            f"Photo not found: {src}\n"
+            f"Either place your photo at that path, or run: python make_ascii.py <path>"
+        )
+    art = to_ascii(src)
+    with open(OUT, "w", encoding="utf-8") as f:
+        f.write(art)
+    print(art)
+
+
+if __name__ == "__main__":
+    main()
