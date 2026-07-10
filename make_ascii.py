@@ -5,30 +5,32 @@ OUT = r"D:\Claude Local Session\github-profile-readme\ascii_art.txt"
 
 RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
-COLS = 40
+COLS = 42
 ASPECT = 0.46  # monospace glyphs are ~2x taller than wide
 
 def to_ascii(path, cols=COLS):
     img = Image.open(path).convert("L")
 
-    # crop to a tighter head+shoulders frame (drop excess background/torso)
+    # crop to head + upper chest only (drop background halo and torso)
     w, h = img.size
-    left = int(w * 0.10)
-    right = int(w * 0.90)
-    top = 0
-    bottom = int(h * 0.85)
+    left = int(w * 0.18)
+    right = int(w * 0.82)
+    top = int(h * 0.15)
+    bottom = int(h * 0.72)
     img = img.crop((left, top, right, bottom))
 
     img = ImageOps.autocontrast(img, cutoff=0.5)
-    img = ImageEnhance.Contrast(img).enhance(1.15)
+    img = ImageEnhance.Contrast(img).enhance(1.4)
     img = ImageEnhance.Sharpness(img).enhance(1.5)
+    # push the studio backdrop (including its vignette) toward pure white
+    img = img.point(lambda p: 255 if p > 120 else p)
 
     w, h = img.size
     rows = max(1, int(cols * (h / w) * ASPECT))
     img = img.resize((cols, rows), Image.LANCZOS)
     pixels = list(img.getdata())
 
-    BG_THRESHOLD = 168  # pixels lighter than this are treated as background -> blank
+    BG_THRESHOLD = 165  # pixels lighter than this are treated as background -> blank
 
     ramp_len = len(RAMP) - 1
     lines = []
